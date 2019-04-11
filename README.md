@@ -1,2 +1,2 @@
 # sbhib
-Postman collection is included, SQL command to create database aswell.
+Postman collection is included, SQL command to create MySQL database aswell.
