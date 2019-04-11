@@ -1,0 +1,14 @@
+Schema: Animals
+User: root
+Password: root
+url: jdbc:mysql://localhost:3306/animals?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+
+
+create table animal
+(
+    id      int         not null
+        primary key,
+    name    varchar(45) null,
+    species varchar(45) null,
+    gender  varchar(45) null
+);
