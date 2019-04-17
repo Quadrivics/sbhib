@@ -14,21 +14,34 @@ public class Animal {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "species", nullable = false)
+    @Column(name = "species")
     private String species;
 
-    @Column(name = "gender", nullable = false)
+    @Column(name = "gender")
     private String gender;
+//
+//    @Column(name = "level")
+//    private String level;
+//
+//    @Column(name = "hp")
+//    private String hp;
+//
+//    @Column(name = "condition")
+//    private String condition;
 
     public Animal() {
 
     }
 
     public Animal(int id, String name, String species, String gender) {
+//        , String level, String hp, String condition
         this.id = id;
         this.name = name;
         this.species = species;
         this.gender = gender;
+//        this.level = level;
+//        this.hp = hp;
+//        this.condition = condition;
     }
 
     @Override
@@ -38,6 +51,9 @@ public class Animal {
                 ", name='" + name + '\'' +
                 ", species=" + species +
                 ", gender='" + gender + '\'' +
+//                ", level='" + level + '\'' +
+//                ", hp='" + hp + '\'' +
+//                ", condition='" + condition + '\'' +
                 '}';
     }
 
@@ -72,4 +88,28 @@ public class Animal {
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+//    public String getLevel() {
+//        return level;
+//    }
+//
+//    public void setLevel(String  level) {
+//        this.level = level;
+//    }
+//
+//    public String  getHp() {
+//        return hp;
+//    }
+//
+//    public void setHp(String  hp) {
+//        this.hp = hp;
+//    }
+//
+//    public String getCondition() {
+//        return condition;
+//    }
+//
+//    public void setCondition(String condition) {
+//        this.condition = condition;
+//    }
 }

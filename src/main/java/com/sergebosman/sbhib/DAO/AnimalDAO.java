@@ -45,10 +45,13 @@ public class AnimalDAO implements IAnimalDAO{
 
     @Override
     public void updateAnimal(Animal animal) {
-        Animal trt = getAnimalById(animal.getId());
-        trt.setName(animal.getName());
-        trt.setGender(animal.getGender());
-        trt.setSpecies(animal.getSpecies());
+        Animal nml = getAnimalById(animal.getId());
+        nml.setName(animal.getName());
+        nml.setGender(animal.getGender());
+        nml.setSpecies(animal.getSpecies());
+//        nml.setLevel(animal.getLevel());
+//        nml.setHp(animal.getHp());
+//        nml.setCondition(animal.getCondition());
         entityManager.flush();
     }
 

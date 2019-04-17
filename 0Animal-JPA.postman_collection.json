@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "9ba1696e-94d8-4d3c-adab-d2837e828c79",
+		"_postman_id": "3022af30-9624-498c-8d3b-9261adcd9dcb",
 		"name": "Animal-JPA",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/animaldata/application/",
+			"name": "http://localhost:8080/animaldata/animal/ (Charizard)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -17,7 +17,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Trackzilla\",\n\t\"description\" : \"An application used to track defects and enhancements.\",\n\t\"owner\": \"Kesha Williams\"\n}"
+					"raw": "{\n\t\"name\": \"Charizard\",\n\t\"species\" : \"Fire\",\n\t\"gender\": \"Male\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/animaldata/animal/",
@@ -31,12 +31,13 @@
 						"animal",
 						""
 					]
-				}
+				},
+				"description": "Add a Charizard Male"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/animaldata/application/ copy",
+			"name": "http://localhost:8080/animaldata/animal/ (Blastoise)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -47,7 +48,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Rudolph\",\n\t\"species\" : \"Reindeer\",\n\t\"gender\": \"Male\"\n}"
+					"raw": "{\n\t\"name\": \"Blastoise\",\n\t\"species\" : \"Water\",\n\t\"gender\": \"Male\",\n\t\"level\": \"52\",\n\t\"hp\": \"156\",\n\t\"condition\": \"none\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/animaldata/animal/",
@@ -61,12 +62,44 @@
 						"animal",
 						""
 					]
-				}
+				},
+				"description": "Add a Blastoise Male"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/animaldata/application/1",
+			"name": "http://localhost:8080/animaldata/animal/ (Venusaur)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Venusaur\",\n\t\"species\" : \"Grass\",\n\t\"gender\": \"Female\",\n\t\"level\": \"52\",\n\t\"hp\": \"156\",\n\t\"condition\": \"none\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/animaldata/animal/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"animaldata",
+						"animal",
+						""
+					]
+				},
+				"description": "Add a Venusaur Female"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/animaldata/animal/1 (AnimalId)",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -92,7 +125,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/animaldata/applications/",
+			"name": "http://localhost:8080/animaldata/animals/ (Get all)",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -118,7 +151,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/animaldata/application/",
+			"name": "http://localhost:8080/animaldata/animal/",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -129,7 +162,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"insert name here\",\n\t\"species\": \"insert species here\",\n    \"gender\": \"insert gender here\"\n}"
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"Name\",\n\t\"species\": \"Species\",\n    \"gender\": \"Gender\"\n    \"level\": \"0\"\n\t\"hp\": \"0\"\n\t\"condition\": \"Condition\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/animaldata/animal/",
@@ -143,12 +176,13 @@
 						"animal",
 						""
 					]
-				}
+				},
+				"description": "Change animal by id"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/animaldata/application/1",
+			"name": "http://localhost:8080/animaldata/animal/1",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -168,12 +202,13 @@
 						"animal",
 						"3"
 					]
-				}
+				},
+				"description": "Delete Animal"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/animaldata/release/",
+			"name": "http://localhost:8080/animaldata/transfer/",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -184,10 +219,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"releaseDate\": \"2025-09-14\",\n\t\"description\": \"The description\"\n}"
+					"raw": "{\n\t\"transferDate\": \"2019-04-16\",\n\t\"origin\": \"Hoenn\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/animaldata/release/",
+					"raw": "http://localhost:8080/animaldata/transfer/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -195,15 +230,16 @@
 					"port": "8080",
 					"path": [
 						"animaldata",
-						"release",
+						"transfer",
 						""
 					]
-				}
+				},
+				"description": "Add a animaltransfer"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/animaldata/release/ (with Apps)",
+			"name": "http://localhost:8080/animaldata/transfer/ (with Animals)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -214,10 +250,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"releaseDate\": \"2025-09-01\",\n\t\"description\": \"The description\",\n\t\"applications\": [{\"name\": \"New App1\", \"description\": \"App added with release\", \"owner\": \"Jane Doe\"},{\"name\": \"New App2\", \"description\": \"Another app added with release\", \"owner\": \"Jane Doe\"}]\n}"
+					"raw": "{\n\t\"transferDate\": \"2019-05-14\",\n\t\"origin\": \"Kanto\",\n\t\"animals\": [{\"name\": \"Alakazam\", \"species\": \"Psychic\", \"gender\": \"Female\", \"level\": \"63\", \"hp\": \"87\", \"condition\": \"none\"}, {\"name\": \"Scyther\", \"species\": \"Grass\", \"gender\": \"Male\", \"level\": \"73\", \"hp\": \"120\", \"condition\": \"burned\"}, {\"name\": \"Goldeen\", \"species\": \"Water\", \"gender\": \"Female\", \"level\": \"63\", \"hp\": \"87\", \"condition\": \"asleep\"}]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/animaldata/release/",
+					"raw": "http://localhost:8080/animaldata/transfer/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -225,15 +261,16 @@
 					"port": "8080",
 					"path": [
 						"animaldata",
-						"release",
+						"transfer",
 						""
 					]
-				}
+				},
+				"description": "add transfer along with animals"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/animaldata/ticket/",
+			"name": "http://localhost:8080/animaldata/carerequest/",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -244,10 +281,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Multiple Assignees Needed\",\n\t\"description\" : \"There are cases where we need to assign a ticket to more than one person.\",\n\t\"application\": {\"id\":\"1\"},\n\t\"release\": {\"id\":\"1\"},\n\t\"status\": \"Open\"\n}"
+					"raw": "{\n\t\"title\": \"Flu shot\",\n\t\"task\" : \"Animal needs vaccine for flu.\",\n\t\"animal\": {\"id\":\"1\"},\n\t\"carerequest\": {\"id\":\"1\"},\n\t\"status\": \"Open\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/animaldata/ticket/",
+					"raw": "http://localhost:8080/animaldata/carerequest/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -255,15 +292,16 @@
 					"port": "8080",
 					"path": [
 						"animaldata",
-						"ticket",
+						"carerequest",
 						""
 					]
-				}
+				},
+				"description": "Make a carerequest for a specific animal"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/animaldata/release/1/1",
+			"name": "http://localhost:8080/animaldata/transfer/1/1 (AnimalID, TransferID)",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -277,7 +315,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/animaldata/release/1/1",
+					"raw": "http://localhost:8080/animaldata/transfer/1/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -285,40 +323,9 @@
 					"port": "8080",
 					"path": [
 						"animaldata",
-						"release",
+						"transfer",
 						"1",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:8080/animaldata/release/1/1 copy",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://localhost:8080/animaldata/release/2/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"animaldata",
-						"release",
-						"2",
-						"1"
+						"2"
 					]
 				}
 			},
